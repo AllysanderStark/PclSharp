@@ -12,6 +12,7 @@
 	outputClass(manager, "XYZRGBA", "PointXYZRGBA", "PointXYZRGBA");
 	outputClass(manager, "XYZL", "PointXYZL", "PointXYZL");
 	outputClass(manager, "Normal", "Normal", "Normal");
+	outputClass(manager, "PointNormal", "PointNormal", "PointNormal");
 	manager.Process(true);
 #>
 <#+ void outputClass(Manager manager, string ClassName, string csClass, string cppClass) 

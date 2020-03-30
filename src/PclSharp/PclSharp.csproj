@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -110,6 +110,9 @@
     <Compile Include="Features\IntegralImageNormalEstimationOfPointXYZAndNormal.generated.cs">
       <DependentUpon>IntegralImageNormalEstimation.tt</DependentUpon>
     </Compile>
+    <Compile Include="Features\NormalEstimationOfPointXYZAndNormal.generated.cs">
+      <DependentUpon>NormalEstimation.tt</DependentUpon>
+    </Compile>
     <Compile Include="Filters\ExtractIndicesOfXYZ.generated.cs">
       <DependentUpon>ExtractIndices.tt</DependentUpon>
     </Compile>
@@ -149,6 +152,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PCDReader.tt</DependentUpon>
     </Compile>
+    <Compile Include="IO\Static.cs" />
     <Compile Include="Native.cs" />
     <Compile Include="PclBase.cs" />
     <Compile Include="PclBaseOfXYZ.generated.cs">
@@ -159,6 +163,9 @@
     </Compile>
     <Compile Include="PointCloud.cs" />
     <Compile Include="PointCloudOfNormal.generated.cs">
+      <DependentUpon>PointCloud.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PointCloudOfPointNormal.generated.cs">
       <DependentUpon>PointCloud.tt</DependentUpon>
     </Compile>
     <Compile Include="PointCloudOfXYZ.generated.cs">
@@ -313,6 +320,9 @@
     <Compile Include="Std\VectorOfPointIndices.generated.cs">
       <DependentUpon>VectorOfUnmanaged.tt</DependentUpon>
     </Compile>
+    <Compile Include="Std\VectorOfPointNormal.generated.cs">
+      <DependentUpon>VectorOfStruct.tt</DependentUpon>
+    </Compile>
     <Compile Include="Std\VectorOfStruct.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -385,6 +395,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IntegralImageNormalEstimation.tt</DependentUpon>
+    </Content>
+    <Content Include="Features\NormalEstimation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>NormalEstimation.txt</LastGenOutput>
+    </Content>
+    <Content Include="Features\NormalEstimation.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NormalEstimation.tt</DependentUpon>
     </Content>
     <Content Include="Filters\ExtractIndices.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -25,7 +25,7 @@
 	outputClass(manager, "XYZRGBA", "PointXYZRGBA", "PointXYZRGBA", pointParms);
 	outputClass(manager, "XYZL", "PointXYZL", "PointXYZL", pointParms);
 	outputClass(manager, "Normal", "Normal", "Normal", pointParms);
-
+	outputClass(manager, "PointNormal", "PointNormal", "PointNormal", pointParms);
 
 	manager.Process(true);
 #>
